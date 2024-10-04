@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .grid-template-custom {
+    grid-template-areas:
+      'header header'
+      'sidebar content'
+      'footer footer';
+  }
+}
