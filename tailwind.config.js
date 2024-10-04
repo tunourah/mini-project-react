@@ -8,9 +8,9 @@ export default {
     extend: {
       gridTemplateAreas: {
         'layout': [
-          'header sidebar',
-          ' content sidebar',
-          ' content sidebar',
+          ' header sidebar ',
+          ' content sidebar ',
+          '  content sidebar ',
         ],
       },
     },
