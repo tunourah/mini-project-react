@@ -10,7 +10,7 @@ const Card = ({ imageSrc, avatarSrc, title, byWho, views, duration }) => {
           className="rounded-xl object-cover w-full h-48"
         />
         <div className="absolute bottom-2 left-2 text-xs text-white bg-black bg-opacity-50 px-1 rounded">
-          {duration} {/* Display the formatted duration here */}
+          {duration} 
         </div>
       </figure>
        
