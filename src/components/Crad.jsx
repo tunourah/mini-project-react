@@ -1,35 +1,26 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Card = ({ imageSrc, avatarSrc, title, byWho, views, duration }) => {
-  return (
-    <div className="card bg-base-100 gap-2 hover:shadow-lg transition-shadow duration-200">
-      <figure className="relative">
-        <img
-          src={imageSrc}
-          alt={title}
-          className="rounded-xl object-cover w-full h-48"
-        />
-        <div className="absolute bottom-2 left-2 text-xs text-white bg-black bg-opacity-50 px-1 rounded">
-          {duration} 
+const Card = ({ videoId, imageSrc, avatarSrc, title, byWho, views, duration }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/video/${videoId}`);
+    };
+
+    return (
+        <div onClick={handleClick} className="cursor-pointer">
+            <img src={imageSrc} alt={title} className="w-full h-auto rounded-md" />
+            <div className="flex items-start mt-2">
+                <img src={avatarSrc} alt={byWho} className="w-8 h-8 rounded-full" />
+                <div className="ml-3">
+                    <h1 className="font-semibold text-sm">{title}</h1>
+                    <p className="text-gray-500 text-xs">{byWho}</p>
+                    <p className="text-gray-500 text-xs">{views} views • {duration}</p>
+                </div>
+            </div>
         </div>
-      </figure>
-       
-      <div className="card-body">
-        <div className="flex gap-2 items-start">
-          <img
-            src={avatarSrc}
-            alt="avatar"
-            className="rounded-full w-10 h-10"
-          />
-          <div className="flex flex-col">
-            <h2 className="card-title">{title}</h2>
-            <p className='text-xs text-gray-500'>{byWho}</p>
-            <p className='text-xs text-gray-500'>{views} views</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Card;

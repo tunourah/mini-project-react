@@ -7,14 +7,14 @@ const Video = () => {
     <div>
         <Header/>   
         {/* video page */}
-<div className='grid grid-cols-4  w-full h-screen'>
-    
-    <div className='col-span-1 bg-slate-500'>
-
-    </div>
-    <div className='col-span-3  '>
+<div className='grid grid-cols-4 gap-2 mt-2 w-full h-screen'>
+<div className=' col-span-4 sm:col-span-3  '>
     <VideoMore/>
 </div>
+    <div className=' col-span-4 sm:col-span-1 bg-slate-500'>
+
+    </div>
+
 </div>
     </div>
   )

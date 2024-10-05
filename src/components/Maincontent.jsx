@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './Crad'; // Ensure the correct file name
+import Card from './Crad';  
 
 const Maincontent = () => {
     const [videos, setVideos] = useState([]);
@@ -11,7 +11,7 @@ const Maincontent = () => {
                 const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
                     params: {
                         part: 'snippet',
-                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s', // Replace with your YouTube API key
+                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s',  
                         maxResults: 50,
                         q: 'web development',
                     }
@@ -22,7 +22,7 @@ const Maincontent = () => {
                 const detailsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
                     params: {
                         part: 'contentDetails,statistics',
-                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s', // Replace with your YouTube API key
+                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s',  
                         id: videoIds,
                     }
                 });
@@ -53,15 +53,17 @@ const Maincontent = () => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
             {videos.map((video, index) => (
-                <Card
-                    key={index}
-                    imageSrc={video.snippet.thumbnails.high.url}
-                    avatarSrc={video.snippet.thumbnails.default.url}
-                    title={video.snippet.title}
-                    byWho={video.snippet.channelTitle}
-                    views={video.statistics.viewCount} // Use actual view count
-                    duration={formatDuration(video.contentDetails.duration)} // Format duration
-                />
+           <Card
+           key={index}
+           videoId={video.id.videoId}   
+           imageSrc={video.snippet.thumbnails.high.url}
+           avatarSrc={video.snippet.thumbnails.default.url}
+           title={video.snippet.title}
+           byWho={video.snippet.channelTitle}
+           views={video.statistics.viewCount}
+           duration={formatDuration(video.contentDetails.duration)}
+       />
+       
             ))}
         </div>
     );

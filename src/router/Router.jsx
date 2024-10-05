@@ -5,6 +5,8 @@ import App from '../App.jsx'
 import SignUp from "../pages/SignUp.jsx";
 import Login from "../pages/Login.jsx";
 import Homepage from "../pages/Homepage.jsx";
+import VideoMore from "../components/VideoMore.jsx";
+import Video from "../pages/Video.jsx";
  const Router = createBrowserRouter([
     {
       path: "/",
@@ -26,7 +28,14 @@ import Homepage from "../pages/Homepage.jsx";
         element: <Homepage />,
         
       },
+    
+      {
+        path: "/video/:videoId",
+        element: <Video />,
+      }
       
+    
+  
       
     
   ]);

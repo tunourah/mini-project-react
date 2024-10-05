@@ -9,8 +9,8 @@ function App() {
     <>
       {/* <Header /> */}
       {/* <Homepage /> */}
-      {/* <Video /> */}
-      <Login  />
+      <Video />
+      {/* <Login  /> */}
     </>
   );
 }
