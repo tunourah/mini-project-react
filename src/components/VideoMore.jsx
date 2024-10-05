@@ -30,7 +30,7 @@ const VideoMore = () => {
   
     // Helper function to format the time since publication
     const formatPublishedDate = (date) => {
-      return moment(date).fromNow(); // This will return values like "قبل سنتين" (2 years ago)
+      return moment(date).fromNow(); 
     };
 
   // Limit the description to two lines, with null checks
@@ -72,6 +72,7 @@ const VideoMore = () => {
           author: item.snippet.topLevelComment.snippet.authorDisplayName,
           authorProfileImage: item.snippet.topLevelComment.snippet.authorProfileImageUrl,
           publishedAt: item.snippet.topLevelComment.snippet.publishedAt,
+          number : item.snippet.totalReplyCount
         }));
 
         setComments(commentsData);

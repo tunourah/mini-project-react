@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import VideoMore from '../components/VideoMore'
+import SideVideo from '../components/SideVideo'
 
 const Video = () => {
   return (
@@ -11,8 +12,8 @@ const Video = () => {
 <div className=' col-span-4 sm:col-span-3  '>
     <VideoMore/>
 </div>
-    <div className=' col-span-4 sm:col-span-1 bg-slate-500'>
-
+    <div className=' col-span-4 sm:col-span-1  '>
+<SideVideo/>
     </div>
 
 </div>
