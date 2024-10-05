@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Commint from './Commint'; 
+import moment from 'moment';  // Import moment.js for date formatting
+
 
 const VideoMore = () => {
   const { videoId } = useParams();   
@@ -15,6 +17,21 @@ const VideoMore = () => {
   const toggleDescription = () => {
     setShowFullDescription((prev) => !prev);
   };
+    // Helper function to format view count
+    const formatViewCount = (viewCount) => {
+      if (viewCount >= 1000000) {
+        return (viewCount / 1000000).toFixed(1) + 'M views';
+      } else if (viewCount >= 1000) {
+        return (viewCount / 1000).toFixed(1) + 'K views';
+      }
+      return viewCount + ' views';
+    };
+    
+  
+    // Helper function to format the time since publication
+    const formatPublishedDate = (date) => {
+      return moment(date).fromNow(); // This will return values like "قبل سنتين" (2 years ago)
+    };
 
   // Limit the description to two lines, with null checks
   const descriptionLines = showFullDescription 
@@ -174,9 +191,11 @@ const VideoMore = () => {
       </div>
 
       {/* Description */}
-      <div className='mt-4'>
-        <h2 className='text-lg font-bold'>Description</h2>
-        <p className='text-gray-600'>
+      <div className='mt-4 bg-gray-200 rounded-lg p-4'>
+      <h2 className='text-sm'>
+        {formatViewCount(videoDetails?.statistics?.viewCount)} 
+        <span> {formatPublishedDate(videoDetails?.snippet?.publishedAt)} </span>
+      </h2>        <p className='text-gray-600'>
           {descriptionLines}
           {!showFullDescription && videoDetails?.snippet?.description?.split('\n').length > 2 && (
             <span onClick={toggleDescription} className='text-blue-500 cursor-pointer'> ...</span>
