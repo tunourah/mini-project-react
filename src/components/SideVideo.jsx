@@ -50,9 +50,9 @@ const SideVideo = () => {
 
     return (
         <div className='h-screen flex flex-col p-4'>
-            <div className="card bg-base-100 shadow-xl transition-transform transform hover:scale-105">
+            <div className="card bg-gray-300 shadow-xl transition-transform transform hover:scale-105 ">
                 <div className="card-body text-center">
-                    <h2 className="card-title text-2xl font-bold">Hello, I'm NORA</h2>
+                    <h2 className="card-title text-2xl font-bold"> I'm NORA</h2>
                     <p className="mt-2 text-gray-700">A Passionate Front-End Developer</p>
                     <div className="flex justify-center mt-4 space-x-4">
                         <FaReact className="text-4xl text-blue-400" title="React" aria-label="React" />
