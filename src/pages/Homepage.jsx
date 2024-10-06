@@ -10,7 +10,7 @@ const Homepage = () => {
               <aside className="  col-span-1 row-span-12 h-full "><Sidebar/></aside>
 
       <header className="  col-span-11 row-span-1 w-full  "> <Headers></Headers></header>
-      <main className="  col-span-11 row-span-11 w-full"><Maincontent/></main>
+      <main className="  col-span-11 row-span-11 w-full ms-7"><Maincontent/></main>
     </div>
   );
 };

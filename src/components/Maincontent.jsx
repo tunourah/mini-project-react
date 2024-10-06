@@ -11,7 +11,7 @@ const Maincontent = () => {
                 const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
                     params: {
                         part: 'snippet',
-                        key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',  
+                        key: 'AIzaSyD49K6Msa8ddsS4FWadnE7_3q0OMrUvPyI',  
                         maxResults: 100,
                         q: 'ALhilal',   
                     }
@@ -22,7 +22,7 @@ const Maincontent = () => {
                 const detailsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
                     params: {
                         part: 'contentDetails,statistics',
-                        key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',  
+                        key: 'AIzaSyD49K6Msa8ddsS4FWadnE7_3q0OMrUvPyI',  
                         id: videoIds,
                     }
                 });
@@ -51,7 +51,26 @@ const Maincontent = () => {
     };
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+        <div>
+         <div className="flex flex-wrap gap-4 mt-2 ms-3">
+  <button className="bg-black text-white py-1 px-1 sm:py-2 sm:px-4 rounded">
+    All Content
+  </button>
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1  sm:py-2 sm:px-4 rounded">
+    Music
+  </button>
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded">
+    Rap
+  </button>
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded">
+    Science
+  </button>
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded">
+    It Has Been Viewed
+  </button>
+</div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 mt-4">
             {videos.map((video, index) => (
            <Card
            key={index}
@@ -65,6 +84,7 @@ const Maincontent = () => {
        />
        
             ))}
+        </div>
         </div>
     );
 };

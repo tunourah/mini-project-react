@@ -44,7 +44,7 @@ const VideoMore = () => {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
           params: {
             part: 'snippet,contentDetails,statistics',
-            key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',  
+            key: 'AIzaSyD49K6Msa8ddsS4FWadnE7_3q0OMrUvPyI',  
             id: videoId,
           },
         });
@@ -60,7 +60,7 @@ const VideoMore = () => {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/commentThreads', {
           params: {
             part: 'snippet',
-            key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',   
+            key: 'AIzaSyD49K6Msa8ddsS4FWadnE7_3q0OMrUvPyI',   
             videoId: videoId,
             textFormat: 'plainText',
             maxResults: 100,  
