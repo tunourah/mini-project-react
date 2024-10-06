@@ -12,9 +12,9 @@ const SideVideo = () => {
                 const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
                     params: {
                         part: 'snippet',
-                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s',
+                        key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',
                         maxResults: 50,
-                        q: 'web development',
+                        q: 'ALhilal',
                     }
                 });
 
@@ -25,7 +25,7 @@ const SideVideo = () => {
                 const detailsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
                     params: {
                         part: 'contentDetails,statistics',
-                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s',
+                        key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',
                         id: videoIds,
                     }
                 });
@@ -50,28 +50,27 @@ const SideVideo = () => {
 
     return (
         <div className='h-screen flex flex-col p-4'>
-            <div className="card bg-gray-300 shadow-xl transition-transform transform hover:scale-105 ">
-                <div className="card-body text-center">
-                    <h2 className="card-title text-2xl font-bold"> I'm NORA</h2>
-                    <p className="mt-2 text-gray-700">A Passionate Front-End Developer</p>
-                    <div className="flex justify-center mt-4 space-x-4">
-                        <FaReact className="text-4xl text-blue-400" title="React" aria-label="React" />
-                        <FaHtml5 className="text-4xl text-orange-500" title="HTML5" aria-label="HTML5" />
-                        <FaCss3Alt className="text-4xl text-blue-600" title="CSS3" aria-label="CSS3" />
-                    </div>
-                    <p className="mt-4">I create responsive, user-friendly web applications.</p>
-                    <div className="card-actions justify-center mt-6">
-                        <a 
-                            href="https://www.linkedin.com/in/noura-a-altuwaim"  
-                            target="_blank"  
-                            rel="noopener noreferrer" 
-                            className="btn btn-primary"
-                        >
-                            Contact Me!
-                        </a>
-                    </div>
-                </div>
-            </div>
+          <div className="card bg-gray-300 shadow-xl transition-transform transform hover:scale-105 ">
+    <div className="card-body text-center">
+        <h2 className="card-title text-2xl font-bold"> NORA</h2>
+        <p className="mt-2 text-gray-700">A Passionate Front-End Developer</p>
+        <div className="flex justify-center mt-4 space-x-4">
+            <FaReact className="text-4xl text-blue-400" title="React" aria-label="React" />
+            <FaHtml5 className="text-4xl text-orange-500" title="HTML5" aria-label="HTML5" />
+            <FaCss3Alt className="text-4xl text-blue-600" title="CSS3" aria-label="CSS3" />
+        </div>
+        <div className="card-actions  justify-center mt-6">
+            <a 
+                href="https://www.linkedin.com/in/noura-a-altuwaim"  
+                target="_blank"  
+                rel="noopener noreferrer" 
+                className="btn btn-primary"
+            >
+                View More
+            </a>
+        </div>
+    </div>
+</div>
 
             {/* Render fetched videos using Sidecard */}
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6">

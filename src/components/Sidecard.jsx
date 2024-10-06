@@ -15,12 +15,12 @@ const Sidecard = ({ videoId, imageSrc, title, channel, views, date }) => {
     };
 
     return (
-        <div onClick={handleClick} className="cursor-pointer mb-4">
-            <div className="flex p-2 border-b border-gray-300 hover:bg-gray-100">
+        <div onClick={handleClick} className="cursor-pointer mb-4 rounded-md">
+            <div className="flex p-2 border-b border-gray-300 hover:bg-gray-100 rounded-md">
                 <img 
                     src={imageSrc} 
                     alt={title} 
-                    className="w-40 h-24 object-cover" 
+                    className="w-40 h-24 object-cover rounded-md" 
                     onError={handleImageError} // Add error handling for images
                 />
                 <div className="ml-2 flex-1">

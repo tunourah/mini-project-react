@@ -6,8 +6,8 @@ const Commint = ({ comments = [], addComment }) => {
   const handleCommentSubmit = (e) => {
     e.preventDefault();
     if (newComment.trim()) {
-      addComment(newComment); // Pass the comment to the parent component
-      setNewComment(''); // Clear the input field
+      addComment(newComment);  
+      setNewComment('');  
     }
   };
 

@@ -11,9 +11,9 @@ const Maincontent = () => {
                 const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
                     params: {
                         part: 'snippet',
-                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s',  
-                        maxResults: 50,
-                        q: 'web development',
+                        key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',  
+                        maxResults: 100,
+                        q: 'ALhilal',   
                     }
                 });
 
@@ -22,7 +22,7 @@ const Maincontent = () => {
                 const detailsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
                     params: {
                         part: 'contentDetails,statistics',
-                        key: 'AIzaSyD1bPP-jFKG2r3O4ykac6nXlPfo6bTFq3s',  
+                        key: 'AIzaSyBlnhaRGU15gSRnjBQRXf449eBM9CegLu8',  
                         id: videoIds,
                     }
                 });
