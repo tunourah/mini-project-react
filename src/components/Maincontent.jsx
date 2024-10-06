@@ -13,7 +13,7 @@ const Maincontent = () => {
                         part: 'snippet',
                         key: 'AIzaSyD49K6Msa8ddsS4FWadnE7_3q0OMrUvPyI',  
                         maxResults: 100,
-                        q: 'ALhilal',   
+                        q: 'مدير العالم',   
                     }
                 });
 
@@ -53,19 +53,19 @@ const Maincontent = () => {
     return (
         <div>
          <div className="flex flex-wrap gap-4 mt-2 ms-3">
-  <button className="bg-black text-white py-1 px-1 sm:py-2 sm:px-4 rounded">
+  <button className="bg-black text-white py-1 px-1 sm:py-2 sm:px-4 rounded-full">
     All Content
   </button>
-  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1  sm:py-2 sm:px-4 rounded">
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1  sm:py-2 sm:px-4 rounded-full">
     Music
   </button>
-  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded">
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded-full">
     Rap
   </button>
-  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded">
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded-full">
     Science
   </button>
-  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded">
+  <button className="bg-gray-300 hover:bg-gray-200 text-black py-1 px-1 sm:py-2 sm:px-4 rounded-full">
     It Has Been Viewed
   </button>
 </div>
