@@ -13,7 +13,7 @@ const Maincontent = () => {
                         part: 'snippet',
                         key: 'AIzaSyD49K6Msa8ddsS4FWadnE7_3q0OMrUvPyI',  
                         maxResults: 100,
-                        q: 'مدير العالم',   
+                        q: 'theprimetime',   
                     }
                 });
 
